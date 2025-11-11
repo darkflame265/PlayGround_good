@@ -13,29 +13,17 @@ public class GameDirector : MonoBehaviour
     private bool isTimerRunning = true; // 타이머가 현재 실행 중인지 여부를 나타내는 변수
 
     [Header("게임 종료 UI 설정")]
-    public GameObject exitUI; // 게임 종료 확인 UI 패널 (Inspector에서 연결)
-    public Button yesButton; // '확인' 또는 'Yes' 버튼 (Inspector에서 연결)
-    public Button noButton;  // '아니요' 또는 'No' 버튼 (Inspector에서 연결)
+    public GameObject settingUI; // 게임 종료 확인 UI 패널 (Inspector에서 연결)
 
-    private bool isExitUIActive = false; // 종료 UI 활성화 상태 확인
+    private bool issettingUIActive = false; // 종료 UI 활성화 상태 확인
 
     void Start()
     {
         // ... (기존 Start 로직) ...
         // 게임 시작 시 종료 UI는 비활성화 상태로 시작합니다.
-        if (exitUI != null)
+        if (settingUI != null)
         {
-            exitUI.SetActive(false);
-        }
-
-        // 버튼 클릭 이벤트 리스너 등록
-        if (yesButton != null)
-        {
-            yesButton.onClick.AddListener(QuitGame); // '확인' 버튼 클릭 시 QuitGame 함수 호출
-        }
-        if (noButton != null)
-        {
-            noButton.onClick.AddListener(HideExitUI); // '아니요' 버튼 클릭 시 HideExitUI 함수 호출
+            settingUI.SetActive(false);
         }
     }
 
@@ -61,17 +49,17 @@ public class GameDirector : MonoBehaviour
         // ESC 키 입력 감지
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (exitUI != null)
+            if (settingUI != null)
             {
-                if (isExitUIActive)
+                if (issettingUIActive)
                 {
                     // 종료 UI가 활성화 상태일 때 ESC 누르면 숨김
-                    HideExitUI();
+                    HideSettingUI();
                 }
                 else
                 {
                     // 종료 UI가 비활성화 상태일 때 ESC 누르면 표시
-                    ShowExitUI();
+                    ShowsettingUI();
                 }
             }
         }
@@ -79,12 +67,12 @@ public class GameDirector : MonoBehaviour
     }
 
     // 게임 종료 확인 UI를 표시하는 함수
-    public void ShowExitUI()
+    public void ShowsettingUI()
     {
-        if (exitUI != null)
+        if (settingUI != null)
         {
-            exitUI.SetActive(true);
-            isExitUIActive = true;
+            settingUI.SetActive(true);
+            issettingUIActive = true;
             // 필요하다면 게임 일시 정지 로직 추가 (Time.timeScale = 0f;)
             Time.timeScale = 0f; // 게임 시간 정지
 
@@ -95,12 +83,12 @@ public class GameDirector : MonoBehaviour
     }
 
     // 게임 종료 확인 UI를 숨기는 함수
-    public void HideExitUI()
+    public void HideSettingUI()
     {
-        if (exitUI != null)
+        if (settingUI != null)
         {
-            exitUI.SetActive(false);
-            isExitUIActive = false;
+            settingUI.SetActive(false);
+            issettingUIActive = false;
             // 필요하다면 게임 일시 정지 해제 로직 추가 (Time.timeScale = 1f;)
             Time.timeScale = 1f; // 게임 시간 다시 시작
 
@@ -110,33 +98,19 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    // 게임을 종료하는 함수
-    public void QuitGame()
-    {
-        Debug.Log("게임 종료!");
-        // 유니티 에디터에서는 Application.Quit()가 작동하지 않습니다.
-        // 에디터에서 테스트 시에는 Debug.Log로 확인합니다.
-        // 빌드된 게임에서는 이 함수가 게임을 종료시킵니다.
-        Application.Quit();
-
-        // 에디터에서 게임 종료 테스트를 위한 코드 (빌드 시에는 주석 처리 또는 제거)
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-    }
-
     // 점프력 강화 알림 메시지를 표시하는 함수
-    public void NoticeUpgrade()
+    public void NoticeUpgrade(string msg)
     {
         // 코루틴을 시작하여 텍스트를 표시하고 잠시 후 숨깁니다.
-        StartCoroutine(ShowAndHideText());
+        StartCoroutine(ShowAndHideText(msg));
     }
+    
 
     // 텍스트를 표시하고 잠시 후 숨기는 코루틴
-    private IEnumerator ShowAndHideText()
+    private IEnumerator ShowAndHideText(string msg)
     {
         // 텍스트 설정
-        upgradeText.text = "[Upgrade JumpHeight]\n 1.2 -> 10.0";
+        upgradeText.text = msg;
         // Text 오브젝트 활성화 (필요한 경우)
         upgradeText.gameObject.SetActive(true);
 

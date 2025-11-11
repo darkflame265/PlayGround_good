@@ -37,7 +37,7 @@ public class JumpUpgradeCube : MonoBehaviour
                     isJumpBoosted = true;
 
                     // GameDirector의 NoticeUpgrade 함수 호출
-                    gd.NoticeUpgrade();
+                    gd.NoticeUpgrade("JUMP POWER UP : "  + jumpBoostAmount);
 
                     Debug.Log("점프력 강화! 증가량: " + jumpBoostAmount + ", 지속 시간: " + duration + "초");
 

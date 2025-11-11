@@ -37,7 +37,8 @@ public class SpeedUpgradeCube : MonoBehaviour
                     isSpeedBoosted = true;
 
                     // GameDirector의 NoticeUpgrade 함수 호출
-                    gd.NoticeSpeedUpgrade();
+                    //gd.NoticeSpeedUpgrade("123");
+                    gd.NoticeUpgrade("Speed Power UP: " + speedBoostAmount);
 
                     Debug.Log("스피드 강화! 증가량: " + speedBoostAmount + ", 지속 시간: " + duration + "초");
 

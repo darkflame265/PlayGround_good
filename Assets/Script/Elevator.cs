@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections; // 코루틴 사용을 위해 필요
 
+
 public class Elevator : MonoBehaviour
 {
     public GameObject targetObject; // 움직일 대상 오브젝트 (Inspector 창에서 연결)
@@ -11,6 +12,8 @@ public class Elevator : MonoBehaviour
     private Vector3 initialPosition; // 시작 위치
     private bool isMovingUp = false; // 위로 움직이는 중인지 확인
     private bool isMovingDown = false; // 아래로 움직이는 중인지 확인
+
+    private Transform currentPlatformUser = null;
 
     void Start()
     {

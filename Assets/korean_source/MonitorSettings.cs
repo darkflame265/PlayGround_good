@@ -91,7 +91,7 @@ public class MonitorSettings : MonoBehaviour
         }
 
         // 4) 최초 적용
-        ApplyAll();
+        //ApplyAll();
 
         InitFovFromPrefs();
     }

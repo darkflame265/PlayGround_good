@@ -18,8 +18,8 @@ public class SoundSettings : MonoBehaviour
         if (audioManager == null)
             audioManager = FindObjectOfType<AudioManager>();
 
-        // 저장된 볼륨 불러오기 (없으면 1.0)
-        float saved = PlayerPrefs.GetFloat(KEY_BGM_VOLUME, 1f);
+        // ★★★ 변경: 저장된 볼륨 불러오기 (없으면 0.0)
+        float saved = PlayerPrefs.GetFloat(KEY_BGM_VOLUME, 0f); // 1f를 0f로 변경
 
         // 슬라이더 초기화 (0~100 UI → 0.0~1.0 내부)
         if (bgmSlider)
