@@ -3,11 +3,16 @@
 # 흑길동 : 대유쾌마운틴
 
 **점프 입력 누락 문제를 점프 버퍼 로직으로 해결하고,**
-**테스터 피드백 기반 레벨 디자인을 개선한 Unity 2D 플랫포머 게임**
+**테스터 피드백 기반 레벨 디자인을 개선한 Unity 3D 플랫포머 게임**
 
 <br/>
 
-![Unity](https://img.shields.io/badge/Unity-2D-000000?style=for-the-badge&logo=unity&logoColor=white)
+[![시연 영상](https://img.shields.io/badge/▶%20시연%20영상-Vimeo-1AB7EA?style=for-the-badge&logo=vimeo&logoColor=white)](https://vimeo.com/1157451424)
+[![다운로드](https://img.shields.io/badge/⬇%20게임%20다운로드-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1BDh63ggmo_Zhu1bhHyxM4UVa7_0XmLQQ/view)
+
+<br/>
+
+![Unity](https://img.shields.io/badge/Unity-3D-000000?style=for-the-badge&logo=unity&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
