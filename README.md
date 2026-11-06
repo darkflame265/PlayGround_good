@@ -7,16 +7,14 @@
 
 <br/>
 
-[![시연 영상](https://img.shields.io/badge/▶%20시연%20영상-Vimeo-1AB7EA?style=for-the-badge&logo=vimeo&logoColor=white)](https://vimeo.com/1157451424)
-[![다운로드](https://img.shields.io/badge/⬇%20게임%20다운로드-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1BDh63ggmo_Zhu1bhHyxM4UVa7_0XmLQQ/view)
+[![시연 영상 보기](https://img.shields.io/badge/시연_영상_보기-1AB7EA?style=for-the-badge&logo=vimeo&logoColor=white)](https://vimeo.com/1157451424)
+[![게임 다운로드](https://img.shields.io/badge/게임_다운로드-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1BDh63ggmo_Zhu1bhHyxM4UVa7_0XmLQQ/view)
 
 <br/>
 
-![Unity](https://img.shields.io/badge/Unity-3D-000000?style=for-the-badge&logo=unity&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+**개발 환경** · Unity · C# · Windows
 
-*CNSU 3학년 2학기 캡스톤 디자인*
+*충남도립대학교 3학년 2학기 캡스톤디자인 출품작*
 
 </div>
 
@@ -33,45 +31,6 @@
 <img width="800" alt="게임 플레이 화면 2" src="https://github.com/user-attachments/assets/b20d2774-f75b-445a-b3e4-2517e1f20e14" />
 
 </div>
-
----
-
-## 수상
-
-| 구분 | 내용 |
-|------|------|
-| **대상 수상** | 충남도립대학교 교육성과공유회 **2025년 Capstone Design 경진대회**, 2025.12.05 |
-
-### 캡스톤디자인 경진대회 대상
-
-<a href="docs/images/capstone-2025-grand-prize.jpg"><img src="docs/images/capstone-2025-grand-prize.jpg" width="360" alt="2025년 캡스톤디자인 경진대회 대상 상장, 수여일 2025년 12월 5일" /></a>
-
-상장의 문서번호를 가린 공개용 사진입니다. 이미지를 누르면 확대할 수 있습니다.
-
-<details>
-<summary>프로젝트 소개 포스터 보기</summary>
-
-### 프로젝트 소개 포스터
-
-<a href="docs/images/project-poster.jpg"><img src="docs/images/project-poster.jpg" width="600" alt="흑길동의 프로젝트 개요, 사용 도구, 게임 화면과 캐릭터를 정리한 소개 포스터" /></a>
-
-소개 자료 캡처에서 이 작품 부분만 잘랐습니다. 작은 글씨는 이미지를 눌러 확대해 주세요.
-
-</details>
-
-공개 이미지에는 크롭·원근 보정·밝기 조정·압축과 명시한 정보 가림만 적용했습니다. 상장 문구와 직인은 생성형 도구로 재작성하지 않았습니다.
-
----
-
-## 아키텍처 — Unity Component Structure
-
-```
-[ Input Layer ]          [ Buffer Layer ]         [ Control Layer ]             [ Output Layer ]
-  InputManager    →→→      JumpBuffer       →→→   CharacterController   →→→    PhysicsSystem
-  (입력 처리)              (코루틴 관리)             (캐릭터 컨트롤)               (물리 엔진)
-                                                    GroundCheck                   Animator
-                                                    (지면 판정)                   (애니메이션)
-```
 
 ---
 
@@ -127,6 +86,24 @@ Coyote Timer 시작  ──── 0.3s 코루틴 ────►  점프 입력 
 
 > 에셋 용량 문제로 중요 스크립트만 Git에 버전 관리하고,
 > 나머지 리소스는 네이버 MyBox에 Package 형태로 백업합니다.
+
+---
+
+## 캡스톤디자인 성과
+
+충남도립대학교 교육성과공유회 **2025년 Capstone Design 경진대회 대상**을 수상했습니다. **수여일: 2025.12.05**
+
+### 프로젝트 소개 포스터
+
+<a href="docs/images/project-poster.jpg"><img src="docs/images/project-poster.jpg" width="600" alt="흑길동의 프로젝트 개요, 사용 도구, 게임 화면과 캐릭터를 정리한 소개 포스터" /></a>
+
+이미지를 누르면 확대해서 볼 수 있습니다.
+
+### 대상 상장
+
+<a href="docs/images/capstone-2025-grand-prize.jpg"><img src="docs/images/capstone-2025-grand-prize.jpg" width="360" alt="2025년 캡스톤디자인 경진대회 대상 상장, 수여일 2025년 12월 5일" /></a>
+
+문서번호를 가린 공개용 사진입니다. 상장 문구와 직인은 유지했으며, 이미지를 누르면 확대할 수 있습니다.
 
 ---
 
