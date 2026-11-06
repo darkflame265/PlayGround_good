@@ -67,3 +67,6 @@ Assets/*
 
 .DS_Store
 Thumbs.db
+
+# README publication images (game asset images remain ignored)
+!docs/images/*.jpg
